@@ -1,6 +1,6 @@
 Play_GridWorld.py let's you play the game yourself
 
-Statistics.py is the statistics program that generated our statistics. The epsilon values it tests are defined in the list in the main for loop (right now only zero: "for epsilon in reversed([0]):")
+Statistics.py is the statistics program that generated our statistics. The epsilon values it tests are defined in the list in the main for loop: "for epsilon in [0,0.005,0.01...]:"
 
 statistics.txt is the our resulting statistics with confidence intervals, means, raw data for given epsilon values. (Note that many have 0 in mean, this simply means the epsilon led to cases where it took more than 10000 steps to get a succesfull algorithm, so we stopped simulating.)
 
