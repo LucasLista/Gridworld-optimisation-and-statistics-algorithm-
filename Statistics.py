@@ -129,7 +129,7 @@ for epsilon in [0,0.005,0.01,0.025,0.05,0.075,0.1,0.125,0.15,0.175,0.2,0.3,0.4,0
             break
         state_action_dictionary=dict() # reset dictionary to reset learning process
         steps=0 
-        while not exit_program: # This is the loop that runs for a single learning process. We made this together, though some things have been stripped
+        while not exit_program: # This is the loop that runs for a single learning process. 
             if render:
                 env.render()
             
@@ -189,7 +189,7 @@ for epsilon in [0,0.005,0.01,0.025,0.05,0.075,0.1,0.125,0.15,0.175,0.2,0.3,0.4,0
         # Calculate statistic values after every q-learning process, so we know when the confidence-interval is small enough to continue to next epsilon value.
         mean=np.mean(results)
         std=np.sqrt(sum([(_-mean)**2/(len(results)-1) for _ in results]))
-        ME=2.947775*std/np.sqrt(len(results)) # 99,68% konfidensinterval
+        ME=2.947775*std/np.sqrt(len(results)) # 99,68% confidence interval
         print(results[-1], " ; ", ME, "|", 0.05*mean) 
 
     # When confidence-interval is small enough, write results to a file called "statistics.txt, in the same folder as this code file. After this the algorithm continues to next epsilon value"
