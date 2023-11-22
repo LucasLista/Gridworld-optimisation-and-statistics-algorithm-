@@ -121,7 +121,7 @@ def is_success_rate_n_percent(dic: dict, n: float) -> bool:
         loop_preventer+=1
 
 # Do statistics for a whole bunch of epsilon values
-for epsilon in reversed([0]): # man kan fjerne reversed, jeg gad bare ikke skrive listen om
+for epsilon in [0,0.005,0.01,0.025,0.05,0.075,0.1,0.125,0.15,0.175,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9]:
     results=[]
     waste_of_time=False # is explained later
     while (not exit_program and ME>0.05*mean) or len(results)<30: # For every instance of this loop, and entire q-learning process is done over with the same epsilon value. This continues until we have a reasonable confidence interval for the amount of steps before the game is won 95% of the time.
