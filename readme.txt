@@ -7,3 +7,5 @@ statistics.txt is the our resulting statistics with confidence intervals, means,
 AI_GridWorld.py a training algorithm for the game with the specific epsilon-value 0.1. This is what is simulated in Statistics.py with many different epsilon values and many different times
 
 person.png, key.png, door.png, death.png, board.txt and GridWorld.py are necessary game files that do not need to be opened manually
+
+Graph.png the graph included in our report, first axis is the epsilon values and the second axis is the avg. amount of steps taken before reaching an algorithm that is successful at least 95% of the time.
